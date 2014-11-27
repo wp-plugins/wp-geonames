@@ -35,7 +35,7 @@ Official [GeoNames](http://www.geonames.org/) website.
 
 1. Go to the new tab in Settings : WP GeoNames
 2. Select the GeoNames file you want
-3. Select Column you want to insert (latitude, longitude, population, elevation...)
+3. Select Columns you want to insert (latitude, longitude, population, elevation...)
 4. Select type of data you want (city, building, lake, mountain...)
 5. Click ADD
 
