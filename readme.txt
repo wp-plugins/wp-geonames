@@ -1,9 +1,9 @@
 === WP GeoNames ===
 Contributors: jacques malgrange
 Donate link: http://www.boiteasite.fr/
-Tags: city, geo, data, sql, table, geonames, gps
+Tags: city, geo, data, sql, table, geonames, gps, place
 Requires at least: 3.0.1
-Tested up to: 4.0
+Tested up to: 4.1
 Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -12,12 +12,13 @@ Allows you to insert all or part of the global GeoNames database in your WordPre
 
 == Description ==
 
-This lightweight plugin makes it easy to install the GeoNames data on your WordPress site.
+This lightweight plugin makes it easy to install the millions of GEONAMES Data on your WordPress site.
 It only works in ADMIN connection and therefore causes no slowing Site.
 It allows :
 
 * Install data from one or more file ;
 * Choose column to install to avoid excessive enlargement of the base ;
+* Choose type of data to install (city, park, road...) ;
 * Remove all the data.
 
 == Installation ==
@@ -30,10 +31,11 @@ It allows :
 
 *Use*
 
-You must use the WordPress tools to get the database. WPDB id your friend.
+You must use the WordPress tools to get the database. **WPDB id your friend**.
 You can write the code directly in your template or in functions.php of your theme.
 
 Name of the table : ($wpdb->prefix)geonames
+
 Names of the columns :
 
 * `idwpgn` (bigint)
