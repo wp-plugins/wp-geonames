@@ -3,7 +3,7 @@ Contributors: jacques malgrange
 Donate link: http://www.boiteasite.fr/
 Tags: city, geo, data, sql, table, geonames, gps, place
 Requires at least: 3.0.1
-Tested up to: 4.1
+Tested up to: 4.0
 Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -28,6 +28,16 @@ It allows :
 1. Unzip the downloaded wp-geonames zip file
 2. Upload the `wp-geonames` folder and its contents into the `wp-content/plugins/` directory of your WordPress installation
 3. Activate WP GeoNames from Plugins page
+
+= Insert GeoNames data =
+
+1. Go to the new tab in Settings : WP GeoNames
+2. Select the GeoNames file you want
+3. Select Column you want to insert (latitude, longitude, population, elevation...)
+4. Select type of data you want (city, building, lake, mountain...)
+5. Click ADD
+
+You can insert as many file as you want.
 
 = Use =
 
