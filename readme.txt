@@ -21,6 +21,8 @@ It allows :
 * Choose type of data to install (city, park, road...) ;
 * Remove all the data.
 
+Official [GeoNames](http://www.geonames.org/) website.
+
 == Installation ==
 
 = Install and Activate =
@@ -68,6 +70,9 @@ Names of the columns :
 * `dem` (smallint)
 * `timezone` (varchar)
 * `modification_date` (date)
+
+Feature Class & Code [here](http://www.geonames.org/export/codes.html).
+
 
 Example : get GPS position for a specific city in a specific country :
 
