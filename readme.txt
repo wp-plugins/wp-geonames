@@ -31,7 +31,7 @@ It allows :
 
 *Use*
 
-You must use the WordPress tools to get the database. **WPDB id your friend**.
+You must use the WordPress tools to get the database. **WPDB is your friend**.
 You can write the code directly in your template or in functions.php of your theme.
 
 Name of the table : ($wpdb->prefix)geonames
