@@ -23,13 +23,13 @@ It allows :
 
 == Installation ==
 
-*Install and Activate*
+= Install and Activate =
 
 1. Unzip the downloaded wp-geonames zip file
 2. Upload the `wp-geonames` folder and its contents into the `wp-content/plugins/` directory of your WordPress installation
 3. Activate WP GeoNames from Plugins page
 
-*Use*
+= Use =
 
 You must use the WordPress tools to get the database. **WPDB is your friend**.
 You can write the code directly in your template or in functions.php of your theme.
