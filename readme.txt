@@ -116,7 +116,7 @@ $s = $wpdb->get_results("SELECT name, latitude, longitude
 	LIMIT 100");
 foreach($s as $t)
 	{
-	$d = (floor(sqrt(pow(($p->latitude-$t->latitude)*60*1.852,2)+pow(($p->longitude-$t->longitude)*60*1.852,2))));
+	$d = (floor(sqrt(pow(($p->latitude-$t->latitude)*60*1.852,2)+pow(($p->longitude-$t->longitude)*60*1.852,2*cos($p->latitude * 0.0174533)))));
 	if($d<=40) echo $t->name. " : " . $d . " km<br />";
 	}`
 
