@@ -13,13 +13,15 @@ Allows you to insert all or part of the global GeoNames database in your WordPre
 == Description ==
 
 This lightweight plugin makes it easy to install the millions of GEONAMES Data on your WordPress site.
-It only works in ADMIN connection and therefore causes no slowing Site.
+It only works to administer the database (in ADMIN connection) and therefore causes no slowing Site.
 It allows :
 
 * Install data from one or more file ;
 * Choose column to install to avoid excessive enlargement of the base ;
 * Choose type of data to install (city, park, road...) ;
 * Remove all the data.
+
+This plugin will give you plenty of ideas to improve the quality of your website.
 
 Official [GeoNames](http://www.geonames.org/) website.
 
@@ -120,6 +122,9 @@ foreach($s as $t)
 	if($d<=40) echo $t->name. " : " . $d . " km<br />";
 	}`
 
+== Screenshots ==
+
+1. Tab WP-GeoNames in the Dashboard.
 
 == Changelog ==
 
