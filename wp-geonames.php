@@ -138,9 +138,9 @@ function wpGeonames_admin()
 						<input type="checkbox" name="wpGeo3" value="1" checked><?php _e('Alternate Names', 'wpGeonames'); ?><br>
 						<input type="checkbox" name="wpGeo4" value="1" checked><?php _e('Latitude', 'wpGeonames'); ?><br>
 						<input type="checkbox" name="wpGeo5" value="1" checked><?php _e('Longitude', 'wpGeonames'); ?><br>
-						<input type="checkbox" name="wpGeo6" value="1" checked><?php _e('Feature Class', 'wpGeonames'); ?><br>
+						<input type="checkbox" name="wpGeo6" value="1" checked disabled><span style="color:#bb2;"><?php _e('Feature Class', 'wpGeonames'); ?></span><br>
 					</td><td>
-						<input type="checkbox" name="wpGeo7" value="1" checked><?php _e('Feature Code', 'wpGeonames'); ?><br>
+						<input type="checkbox" name="wpGeo7" value="1" checked disabled><span style="color:#bb2;"><?php _e('Feature Code', 'wpGeonames'); ?></span><br>
 						<input type="checkbox" name="wpGeo8" value="1" checked disabled /><span style="color:#bb2;"><?php _e('Country Code', 'wpGeonames'); ?></span><br>
 						<input type="checkbox" name="wpGeo9" value="1" checked><?php _e('Country Code2', 'wpGeonames'); ?><br>
 						<input type="checkbox" name="wpGeo10" value="1" checked><?php _e('Admin1 Code', 'wpGeonames'); ?><br>
@@ -227,7 +227,7 @@ function wpGeonames_addZip($url,$f)
 		if($e[0] && in_array($e[6], $fe))
 			{
 			++$c;
-			$g .= '("'.$e[0].'","'.$e[1].'","'.$e[2].'","'.(isset($f['wpGeo3'])?$e[3]:'').'","'.(isset($f['wpGeo4'])?$e[4]:'').'","'.(isset($f['wpGeo5'])?$e[5]:'').'","'.(isset($f['wpGeo6'])?$e[6]:'').'","'.(isset($f['wpGeo7'])?$e[7]:'').'","'.$e[8].'","'.(isset($f['wpGeo9'])?$e[9]:'').'","'.(isset($f['wpGeo10'])?$e[10]:'').'","'.(isset($f['wpGeo11'])?$e[11]:'').'","'.(isset($f['wpGeo12'])?$e[12]:'').'","'.(isset($f['wpGeo13'])?$e[13]:'').'","'.(isset($f['wpGeo14'])?$e[14]:'').'","'.(isset($f['wpGeo15'])?$e[15]:'').'","'.(isset($f['wpGeo16'])?$e[16]:'').'","'.(isset($f['wpGeo17'])?$e[17]:'').'","'.(isset($f['wpGeo18'])?$e[18]:'').'"),';
+			$g .= '("'.$e[0].'","'.$e[1].'","'.$e[2].'","'.(isset($f['wpGeo3'])?$e[3]:'').'","'.(isset($f['wpGeo4'])?$e[4]:'').'","'.(isset($f['wpGeo5'])?$e[5]:'').'","'.$e[6].'","'.$e[7].'","'.$e[8].'","'.(isset($f['wpGeo9'])?$e[9]:'').'","'.(isset($f['wpGeo10'])?$e[10]:'').'","'.(isset($f['wpGeo11'])?$e[11]:'').'","'.(isset($f['wpGeo12'])?$e[12]:'').'","'.(isset($f['wpGeo13'])?$e[13]:'').'","'.(isset($f['wpGeo14'])?$e[14]:'').'","'.(isset($f['wpGeo15'])?$e[15]:'').'","'.(isset($f['wpGeo16'])?$e[16]:'').'","'.(isset($f['wpGeo17'])?$e[17]:'').'","'.(isset($f['wpGeo18'])?$e[18]:'').'"),';
 			}
 		if($c>5000)
 			{
