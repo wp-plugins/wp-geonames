@@ -4,7 +4,7 @@ Donate link: http://www.boiteasite.fr/
 Tags: city, geo, data, sql, table, geonames, gps, place
 Requires at least: 3.0.1
 Tested up to: 4.0
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -122,11 +122,51 @@ foreach($s as $t)
 	if($d<=40) echo $t->name. " : " . $d . " km<br />";
 	}`
 
+
+Example : Suggest cities during the typing by the user (like Google search)
+
+You must use Ajax action and PHP function with the name **"wpgeonamesAjax"**
+
+In your theme, in function.php ; add :
+`function wpgeonamesAjax()
+	{
+	global $wpdb;
+	$s = $wpdb->get_results("SELECT name 
+		FROM ".$wpdb->prefix."geonames 
+		WHERE country_code='FR' and feature_class='P' and name LIKE '".strip_tags($_POST["city"])."%' 
+		ORDER BY name 
+		LIMIT 10");
+	foreach($s as $t)
+		{
+		echo '<div onClick="document.getElementById(\'suggCity\').value=this.innerHTML;document.getElementById(\'suggCity\').innerHTML=\'\';">'.$t->name.'</div>';
+		}
+	}
+`
+
+In your theme, in the right page ; add :
+
+`<input id="inpCity" name="inpCity" type="text" onkeyup="sugg(this,'<?php echo admin_url('admin-ajax.php'); ?>');" />
+<div class="suggCity" id="suggCity"></div>
+<script>
+function sugg(f,g){
+	jQuery(document).ready(function(){
+		jQuery.post(g,{'action':'wpgeonamesAjax','city':f.value},function(r){
+			jQuery('#rencCity').empty();jQuery('#rencCity').append(r.substring(0,r.length-1));
+		});
+	});
+}
+</script>
+`
+
+
 == Screenshots ==
 
 1. Tab WP-GeoNames in the Dashboard.
 
 == Changelog ==
+
+= 1.1 =
+01/12/2014 - Add Ajax hook.
 
 = 1.0 =
 25/11/2014 - First stable version.

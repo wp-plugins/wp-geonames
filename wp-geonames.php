@@ -3,9 +3,11 @@
 Plugin Name: WP GeoNames
 Author: Jacques Malgrange
 Description: Allows you to insert all or part of the global GeoNames database in your WordPress base.
-Version: 1.0
+Version: 1.1
 Author URI: http://www.boiteasite.fr
 */
+add_action('wp_ajax_nopriv_wpgeonamesAjax', 'wpgeonamesAjax');
+add_action('wp_ajax_wpgeonamesAjax', 'wpgeonamesAjax');
 register_activation_hook ( __FILE__, 'wpGeonames_creation_table');
 function wpGeonames_creation_table()
 	{
