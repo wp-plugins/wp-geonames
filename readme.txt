@@ -138,7 +138,7 @@ In your theme, in function.php ; add :
 		LIMIT 10");
 	foreach($s as $t)
 		{
-		echo '<div onClick="document.getElementById(\'suggCity\').value=this.innerHTML;document.getElementById(\'suggCity\').innerHTML=\'\';">'.$t->name.'</div>';
+		echo '<div onClick="document.getElementById(\'inpCity\').value=this.innerHTML;document.getElementById(\'suggCity\').innerHTML=\'\';">'.$t->name.'</div>';
 		}
 	}
 `
@@ -151,7 +151,7 @@ In your theme, in the right page ; add :
 function sugg(f,g){
 	jQuery(document).ready(function(){
 		jQuery.post(g,{'action':'wpgeonamesAjax','city':f.value},function(r){
-			jQuery('#rencCity').empty();jQuery('#rencCity').append(r.substring(0,r.length-1));
+			jQuery('#suggCity').empty();jQuery('#suggCity').append(r.substring(0,r.length-1));
 		});
 	});
 }
