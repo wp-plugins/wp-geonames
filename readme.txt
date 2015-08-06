@@ -4,7 +4,7 @@ Donate link: http://www.boiteasite.fr/
 Tags: city, geo, data, sql, table, geonames, gps, place
 Requires at least: 3.0.1
 Tested up to: 4.0
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -164,6 +164,9 @@ function sugg(f,g){
 1. Tab WP-GeoNames in the Dashboard.
 
 == Changelog ==
+
+= 1.2 =
+06/08/2015 - Fix installation bug.
 
 = 1.1 =
 01/12/2014 - Add Ajax hook.

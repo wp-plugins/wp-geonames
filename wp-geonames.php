@@ -3,7 +3,7 @@
 Plugin Name: WP GeoNames
 Author: Jacques Malgrange
 Description: Allows you to insert all or part of the global GeoNames database in your WordPress base.
-Version: 1.1
+Version: 1.2
 Author URI: http://www.boiteasite.fr
 */
 add_action('wp_ajax_nopriv_wpgeonamesAjax', 'wpgeonamesAjax');
@@ -33,20 +33,20 @@ function wpGeonames_creation_table()
 	timezone			: the timezone id (see file timeZone.txt) varchar(40)
 	modification date	: date of last modification in yyyy-MM-dd format
 	*/
-	require_once( ABSPATH . 'wp-admin/includes/upgrade.php' ); // dbDelta()
+	require_once( ABSPATH . 'wp-admin/includes/upgrade.php' ); // pour utiliser dbDelta()
 	global $wpdb;
 	//
 	if(!empty($wpdb->charset)) $charset_collate = "DEFAULT CHARACTER SET $wpdb->charset";
 	if(!empty($wpdb->collate)) $charset_collate .= " COLLATE $wpdb->collate";
 	$nom = $wpdb->prefix . 'geonames';
-	if($wpdb->get_var("SHOW TABLES LIKE '$db_table_name'")!=$nom)
+	if($wpdb->get_var("SHOW TABLES LIKE '$nom'")!=$nom)
 		{
 		$sql = "CREATE TABLE ".$nom." (
 			`idwpgn` bigint(20) unsigned NOT NULL auto_increment,
-			`geonameid` bigint(20) unsigned NOT NULL UNIQUE,
+			`geonameid` bigint(20) unsigned UNIQUE NOT NULL,
 			`name` varchar(200) NOT NULL,
 			`asciiname` varchar(200) NOT NULL,
-			`alternatenames` text,
+			`alternatenames` text NOT NULL,
 			`latitude` decimal(10,5) NOT NULL,
 			`longitude` decimal(10,5) NOT NULL,
 			`feature_class` char(1) NOT NULL,
